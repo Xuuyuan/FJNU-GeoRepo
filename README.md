@@ -1,6 +1,7 @@
 # 福建师范大学 地理科学专业课程资料存档
 ## [仓库地址](https://github.com/Xuuyuan/FJNU-GeoRepo)
-**点击上方蓝色链接即可访问。受部分原因影响, GitHub在有时候可能出现无法访问的情况, 请使用科学上网。**
+**点击上方蓝色链接即可访问。受部分原因影响, GitHub在有时候可能出现无法访问的情况, 请使用科学上网。**  
+## [电子教材存储仓库](https://github.com/Xuuyuan/FJNU-GeoRepo-BookStore)
 ## 仓库介绍
 本仓库文件适用于 **地理科学类 / 地理信息科学 / 自然地理与资源环境 / 人文地理与城乡规划 / 地理科学** 专业的本科学生。  
 
@@ -17,7 +18,7 @@
 
 由我所提供的文件都会尽量使用Markdown格式, 若需要下载后在本地浏览则需要支持Markdown的阅读器才能正常显示内容。安卓手机可以使用Obsidian, Windows电脑可以使用VS Code、Obsidian、MarkText、Typora等。
 ### 下载项目的所有资料
-↓ 在本仓库页面的右上角找到此按钮(由于文件中含有电子书, 需要下载的文件体积较大, 不建议采用此方法)  
+↓ 在本仓库页面的右上角找到此按钮
 ![Download ZIP](imgs/download_zip.png)
 ### 下载文件夹(也可用于下载所有资料或单个文件)
 1. 打开网站：[GitHub 「特定」文件夹或文件下载工具](https://blog.luckly-mjw.cn/tool-show/github-directory-downloader/index.html)  
