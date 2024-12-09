@@ -18,7 +18,7 @@
 
 由我所提供的文件都会尽量使用Markdown格式, 若需要下载后在本地浏览则需要支持Markdown的阅读器才能正常显示内容。安卓手机可以使用Obsidian, Windows电脑可以使用VS Code、Obsidian、MarkText、Typora等。
 ### 下载项目的所有资料
-↓ 在本仓库页面的右上角找到此按钮
+↓ 在本仓库页面的右上角找到此按钮  
 ![Download ZIP](imgs/download_zip.png)
 ### 下载文件夹(也可用于下载所有资料或单个文件)
 1. 打开网站：[GitHub 「特定」文件夹或文件下载工具](https://blog.luckly-mjw.cn/tool-show/github-directory-downloader/index.html)  
