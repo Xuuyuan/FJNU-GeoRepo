@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!--<!DOCTYPE metadata SYSTEM "http://www.esri.com/metadata/esriprof80.dtd">-->
+<metadata xml:lang="zh"><Esri><MetaID>{B9E094D2-8C7E-4EDB-B12B-9EA66972B8D3}</MetaID><CreaDate>20040814</CreaDate><CreaTime>11121500</CreaTime><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process Name="StreamToFeature_7" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Spatial Analyst Tools.tbx\StreamToFeature" Date="20040814" Time="111215">StreamToFeature streamnet flowdirfill E:\chp11\ex3\result\Stream1.shp SIMPLIFY</Process></lineage></DataProperties></Esri></metadata>

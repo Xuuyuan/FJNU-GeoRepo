@@ -1,0 +1,62 @@
+             ---- Check coverage ----:
+ 
+4.Check code right in coverage:
+  ---RIVER\pat.dbf
+         Code [0] error.
+  ---RIVER\aat.dbf
+         Code compeletely correct.OK!
+  ---WAT_MANU\pat.dbf
+         Code compeletely correct.OK!
+  ---WAT_MANU\aat.dbf
+         Code compeletely correct.OK!
+  ---WAT_BODY\pat.dbf
+         Code compeletely correct.OK!
+  ---WAT_BODY\aat.dbf
+         Code [24080] error.
+  ---DTM_LIN\pat.dbf
+         Code compeletely correct.OK!
+  ---DTM_LIN\aat.dbf
+         Code compeletely correct.OK!
+  ---DTM_PNT\pat.dbf
+         Code [79150] error.
+  ---DTM_PNT\aat.dbf
+         Code [79070] error.
+  ---RAILWAY\pat.dbf
+         Code compeletely correct.OK!
+  ---RAILWAY\aat.dbf
+         Code compeletely correct.OK!
+  ---ROAD\pat.dbf
+         Code compeletely correct.OK!
+  ---ROAD\aat.dbf
+         Code compeletely correct.OK!
+  ---MANUF\pat.dbf
+         Code compeletely correct.OK!
+  ---MANUF\aat.dbf
+         Code compeletely correct.OK!
+  ---URB_CENT\pat.dbf
+         Code [0] error.
+  ---URB_CENT\aat.dbf
+         Code compeletely correct.OK!
+  ---TOW_PNT\pat.dbf
+         Code compeletely correct.OK!
+  ---TOW_PNT\aat.dbf
+         Code compeletely correct.OK!
+  ---COUNTY\pat.dbf
+         Code [0] error.
+  ---COUNTY\aat.dbf
+         Code compeletely correct.OK!
+  ---FLP\pat.dbf
+         Code [92010] error.
+         Code [94030] error.
+  ---FLP\aat.dbf
+         Code compeletely correct.OK!
+  ---OFF_MAP\pat.dbf
+         Code [0] error.
+  ---OFF_MAP\aat.dbf
+         Code compeletely correct.OK!
+  ---ELP\pat.dbf
+         Code compeletely correct.OK!
+  ---ELP\aat.dbf
+         Code compeletely correct.OK!
+  ---B\aat.dbf
+         Code compeletely correct.OK!

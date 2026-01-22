@@ -1,0 +1,13 @@
+Projection    ALBERS                                                            
+Zunits        NO                                                                
+Units         METERS                                                            
+Spheroid      KRASOVSKY                                                         
+Xshift        0.0000000000                                                      
+Yshift        0.0000000000                                                      
+Parameters                                                                      
+ 25  0  0.000 /* 1st standard parallel                                          
+ 47  0  0.000 /* 2nd standard parallel                                          
+ 105  0  0.000 /* central meridian                                              
+ 0  0  0.000 /* latitude of projection's origin                                 
+0.00000 /* false easting (meters)                                       
+0.00000 /* false northing (meters)                                      

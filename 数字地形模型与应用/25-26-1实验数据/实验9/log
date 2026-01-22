@@ -1,0 +1,26 @@
+200508042210   0     0     0panda E:\chp11\ex2\shape2.shp = CONTOUR(E:\chp11\ex2\dem,  INTERVAL, 40, 0)
+200508042211   0     0     0panda E:\chp11\ex2\shape2.shp = CONTOUR(E:\chp11\ex2\dem,  INTERVAL, 40, 0)
+200508042212   0     1     0panda E:\chp11\ex2\nstats2 = FOCALMEAN(E:\chp11\ex2\dem,  Rectangle, 11, 11, DATA)
+200508042212   0     0     0panda E:\chp11\ex2\calc3 = E:\chp11\ex2\dem - E:\chp11\ex2\meandem
+200508042213   0     0     0panda E:\chp11\ex2\rclass2 = RECLASS(E:\chp11\ex2\calc3,  E:\chp11\ex2\remap2, DATA)
+200508042215   0     0     0panda e:\chp11\ex2\FLOWACC0 = (E:\chp11\ex2\flowacc == 0)
+200508042216   0     0     0panda e:\chp11\ex2\FANDEM = Abs(E:\chp11\ex2\dem - 3000)
+200508042218   0     0     0panda e:\chp11\ex2\FANFACC = (E:\chp11\ex2\flowaccfan == 0)
+200508042219   0     0     0panda e:\chp11\ex2\AOBUQU = (E:\chp11\ex2\flowacc0 * E:\chp11\ex2\fanfacc)
+200508042223   0     0     0panda e:\chp11\ex2\RASTERANBU = (E:\chp11\ex2\aobuqu * E:\chp11\ex2\zhengdixing)
+200508042234   0     0     0panda e:\chp11\ex2\FANFACC0 = (E:\chp11\ex2\flowaccfan == 0)
+200508042235   0     1     0panda e:\chp11\ex2\AOBUQU = (E:\chp11\ex2\fanfacc0 * E:\chp11\ex2\flowacc0)
+200508042236   0     0     0panda e:\chp11\ex2\RASTERANBU = (E:\chp11\ex2\aobuqu * E:\chp11\ex2\zhengdixing)
+200508042239   0     0     0panda E:\chp11\ex2\calc2 = E:\ARCGIS\shiyan\exercise\EXERCI~3\flowacc == 0
+200508042240   0     0     0panda E:\chp11\ex2\calc3 = E:\ARCGIS\shiyan\exercise\EXERCI~3\flowacc_flow2 == 0
+200508042240   0     0     0panda E:\chp11\ex2\calc4 = E:\chp11\ex2\calc2 * E:\chp11\ex2\calc3
+200508042241   0     1     0panda E:\chp11\ex2\calc5 = E:\chp11\ex2\calc4 * E:\chp11\ex2\zhengdixing
+200508042250   0     0     0panda e:\chp11\ex2\FLOWACC0 = (E:\chp11\ex2\flowacc == 0)
+200508042250   0     1     0panda e:\chp11\ex2\AOBUQU = (E:\chp11\ex2\fanfacc0 * E:\chp11\ex2\flowacc)
+200508042253   0     0     0panda e:\chp11\ex2\AOBUQU = (E:\chp11\ex2\fanfacc0 * E:\chp11\ex2\flowacc0)
+200508042253   0     0     0panda e:\chp11\ex2\RASTERANBU = (E:\chp11\ex2\aobuqu * E:\chp11\ex2\zhengdixing)
+200508042254   0     0     0panda e:\chp11\ex2\anbudian = GRIDPOINTSHAPE(E:\chp11\ex2\rasteranbu)
+200508042254   0     0     0panda E:\chp11\ex2\rclass2 = (RECLASS(E:\chp11\ex2\rasteranbu,  E:\chp11\ex2\remap2, DATA) == ( -1))
+200508042254   0     0     0panda E:\chp11\ex2\rclass3 = RECLASS(E:\chp11\ex2\rasteranbu,  E:\chp11\ex2\remap2, DATA)
+200508042254   0     0     0panda E:\chp11\ex2\rclass4 = SETNULL(E:\chp11\ex2\rclass2, E:\chp11\ex2\rclass3)
+200508042258   0     0     0panda e:\chp11\ex2\anbudian = GRIDPOINTSHAPE(E:\chp11\ex2\rasteranbu2)

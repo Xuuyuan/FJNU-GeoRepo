@@ -1,0 +1,9 @@
+200508142228   0     0     0leejun E:\Chp9\Ex1\slope2 = SLOPE(E:\Chp9\Ex1\dem,  1, DEGREE)
+200508142228   0     0     0leejun E:\Chp9\Ex1\slope3 = SLOPE(E:\Chp9\Ex1\slope2,  1, DEGREE)
+200508142228   0     0     0leejun E:\Chp9\Ex1\aspect2 = ASPECT(E:\Chp9\Ex1\dem)
+200508142228   0     0     0leejun E:\Chp9\Ex1\slope4 = SLOPE(E:\Chp9\Ex1\aspect2,  1, DEGREE)
+200508142228   0     0     0leejun E:\Chp9\Ex1\calc5 = 1153.791870 - E:\Chp9\Ex1\dem
+200508142229   0     1     0leejun E:\Chp9\Ex1\aspect3 = ASPECT(E:\Chp9\Ex1\calc5)
+200508142229   0     0     0leejun E:\Chp9\Ex1\slope5 = SLOPE(E:\Chp9\Ex1\aspect3,  1, DEGREE)
+200508142229   0     0     0leejun E:\Chp9\Ex1\calc6 = ((E:\Chp9\Ex1\slope4 + E:\Chp9\Ex1\slope5) - Abs(E:\Chp9\Ex1\slope4 - E:\Chp9\Ex1\slope5)) / 2
+200508142231   0     0     0leejun E:\Chp9\Ex1\calc7 = ((E:\Chp9\Ex1\slope4 + E:\Chp9\Ex1\slope5) - Abs(E:\Chp9\Ex1\slope4 - E:\Chp9\Ex1\slope5)) / 2

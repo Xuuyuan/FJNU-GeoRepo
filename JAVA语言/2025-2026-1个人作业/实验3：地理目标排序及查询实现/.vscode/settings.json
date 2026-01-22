@@ -1,0 +1,23 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": [ // 启动终端时传入参数
+                "-NoExit",
+                "chcp 65001"
+            ]
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [ // 启动终端时传入参数
+                "/k",
+                "chcp 65001"
+            ],
+            "icon": "terminal-cmd"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell" // 这里可以选择默认的终端
+}

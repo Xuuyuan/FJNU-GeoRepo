@@ -1,0 +1,12 @@
+Projection    TRANSVERSE                                                        
+Zunits        NO                                                                
+Units         METERS                                                            
+Spheroid      CLARKE1866                                                        
+Xshift        0.0000000000                                                      
+Yshift        0.0000000000                                                      
+Parameters                                                                      
+1.00000000 /* scale factor at central meridian                          
+ 111  0  0.000 /* longitude of central meridian                                 
+ 0  0  0.000 /* latitude of origin                                              
+500000.00000 /* false easting (meters)                                  
+0.00000 /* false northing (meters)                                      
