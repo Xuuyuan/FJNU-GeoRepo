@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>表单 / 学生信息界面</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .loading { text-align: center; padding: 20px; color: #666; }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-brand">学生信息界面</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active">表单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container mt-4 flex-grow-1">
+        <h1 class="mb-4">班级名单管理</h1>
+        
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-light">
+                <strong>录入新学生</strong>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <input type="text" id="inputXuehao" class="form-control" placeholder="学号">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" id="inputName" class="form-control" placeholder="姓名">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" id="inputJiguan" class="form-control" placeholder="籍贯">
+                    </div>
+                    <div class="col-md-3 d-grid">
+                        <button class="btn btn-primary" onclick="addData()">提交数据</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">学号</th>
+                        <th scope="col">姓名</th>
+                        <th scope="col">籍贯</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr><td colspan="4" class="loading">正在加载数据...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="container text-center text-muted mt-4 mb-3">
+        <p><a href="https://beian.miit.gov.cn/" target="_blank" class="text-muted text-decoration-none">闽ICP备XXXXXX号-2</a> | 学生信息界面</p>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const API_URL = '后端地址';
+
+        window.onload = function() {
+            loadData();
+        };
+
+        async function loadData() {
+            const tbody = document.getElementById('tableBody');
+            
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+
+                tbody.innerHTML = '';
+
+                data.forEach(row => {
+                    const tr = document.createElement('tr');
+                    const dbId = row.ID || row.id; 
+                    
+                    tr.innerHTML = `
+                        <th scope="row">${dbId}</th>
+                        <td>${row.xuehao || '-'}</td>
+                        <td>${row.name || '-'}</td>
+                        <td>${row.jiguan || '-'}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+                if (data.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="4" class="text-center">暂无数据</td></tr>';
+                }
+
+            } catch (error) {
+                console.error('加载失败:', error);
+                tbody.innerHTML = `<tr><td colspan="4" class="text-danger text-center">数据加载失败<br>(${error.message})</td></tr>`;
+            }
+        }
+
+        async function addData() {
+            const xuehaoVal = document.getElementById('inputXuehao').value.trim();
+            const nameVal = document.getElementById('inputName').value.trim();
+            const jiguanVal = document.getElementById('inputJiguan').value.trim();
+
+            if (!xuehaoVal || !nameVal || !jiguanVal) {
+                alert('请填写完整信息！');
+                return;
+            }
+
+            const payload = {
+                xuehao: xuehaoVal,
+                name: nameVal,
+                jiguan: jiguanVal
+            };
+
+            try {
+                const response = await fetch(API_URL+ '?t=' + new Date().getTime(), {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    document.getElementById('inputXuehao').value = '';
+                    document.getElementById('inputName').value = '';
+                    document.getElementById('inputJiguan').value = '';
+                    loadData(); 
+                    alert('添加成功！');
+                } else {
+                    const errData = await response.json();
+                    alert('添加失败: ' + (errData.message || '未知错误'));
+                }
+            } catch (error) {
+                console.error('添加出错:', error);
+                alert('请求发送失败');
+            }
+        }
+    </script>
+</body>
+</html>

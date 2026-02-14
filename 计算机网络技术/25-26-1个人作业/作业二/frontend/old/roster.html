@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>表单 / 学生信息界面</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-brand">学生信息界面</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active">表单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-4 flex-grow-1">
+        <h1 class="mb-4">班级名单</h1>
+        <p>仅展示了部分数据，之后可以和后端对接从数据库获取。</p>
+        
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">学号</th>
+                        <th scope="col">姓名</th>
+                        <th scope="col">籍贯</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>109092023001</td>
+                        <td>小杨</td>
+                        <td>福建莆田</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>109092023002</td>
+                        <td>小傅</td>
+                        <td>福建莆田</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>109092023003</td>
+                        <td>小李</td>
+                        <td>福建福州</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>109092023004</td>
+                        <td>小刘</td>
+                        <td>福建三明</td>
+                    </tr>
+                     <tr>
+                        <th scope="row">5</th>
+                        <td>109092023005</td>
+                        <td>小郭</td>
+                        <td>福建泉州</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="container text-center text-muted">
+        <p><a href="https://beian.miit.gov.cn/" target="_blank" class="text-muted text-decoration-none">闽ICP备XXXXXX号-2</a> | 学生信息界面</p>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
