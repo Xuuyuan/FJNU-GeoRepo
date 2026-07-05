@@ -1,0 +1,138 @@
+\documentclass[UTF8,12pt]{ctexart}
+\usepackage[a4paper,margin=2.05cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[colorlinks,
+linkcolor=black,
+anchorcolor=black,
+citecolor=black
+]{hyperref}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.2em}
+\linespread{1.08}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{第 \thepage\ 页，共 \pageref{LastPage} 页}
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\blank}[1][4em]{\underline{\hspace{#1}}}
+\newcommand{\examsection}[1]{\par\addvspace{0.7em}\noindent{\large\bfseries #1}\par\addvspace{0.25em}}
+\newcommand{\choice}[4]{%
+  \begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+  (A) #1 & (B) #2\\[0.4em]
+  (C) #3 & (D) #4
+  \end{tabular}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries 《高等数学 A（下）》期中考试试题}\\[0.5em]
+  {\large 2025--2026 学年 第二学期 / 福建师范大学数学与统计学院}\\[0.3em]
+  排版：\href{https://github.com/Xuuyuan}{@许愿} -- \href{https://wefjnu.nekoark.com}{WeFJNU}
+\end{center}
+
+\examsection{一、单选题（每题 3 分，共 15 分）}
+\begin{enumerate}[label={\arabic*、},leftmargin=2em,itemsep=0.55em]
+\item 下列函数组在其定义区间内线性无关的是（\quad）。
+
+\choice{$\ln x,\ \ln x^2$；}
+{$\sin x,\ \cos x$；}
+{$\sin x\cos x,\ \sin 2x$；}
+{$e^x,\ 2e^x$。}
+
+\item 二次曲面 $z=\dfrac{x^2}{4}-\dfrac{y^2}{9}+z^2$ 与平面 $z=2$ 相截，其截痕是平面 $z=2$ 上的（\quad）。
+
+\choice{双曲线；}{抛物线；}{椭圆；}{直线。}
+
+\item 空间曲线
+$\begin{cases}2x-y^2-z^2=0,\\ z=1\end{cases}$
+在 $xOy$ 面上的投影曲线方程为（\quad）。
+
+\begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+(A) $\begin{cases}2x-y^2=1,\\x=0;\end{cases}$ &
+(B) $\begin{cases}2x-y^2=1,\\y=0;\end{cases}$ \\[1.4em]
+(C) $\begin{cases}2x-y^2=1,\\z=1;\end{cases}$ &
+(D) $\begin{cases}2x-y^2=1,\\z=0.\end{cases}$
+\end{tabular}
+
+\item 设 $\varphi_1(x),\varphi_2(x)$ 为二阶非齐次线性微分方程
+$y''+p(x)y'+q(x)y=f(x)$ 的二个不同的非零解，则下述结论正确的是（\quad）。
+
+\choice{$\varphi_1(x)-\varphi_2(x)$ 是该方程的解；}
+{$\varphi_1(x)+\varphi_2(x)$ 是该方程的解；}
+{$\varphi_1(x)-\varphi_2(x)$ 是对应齐次方程的解；}
+{$\varphi_1(x)+\varphi_2(x)$ 是对应齐次方程的解。}
+
+\item 对于二元函数 $z=f(x,y)$，下述结论正确的是（\quad）。
+
+\choice{全微分存在，则偏导数必连续；}
+{全微分存在，则偏导数不一定存在；}
+{偏导数连续，则全微分存在；}
+{偏导数不连续，则全微分不存在。}
+\end{enumerate}
+
+\examsection{二、填空题（每小题 3 分，共 15 分）}
+\begin{enumerate}[label={\arabic*、},leftmargin=2em,itemsep=0.55em]
+\item $\displaystyle \lim_{(x,y)\to(0,0)}\frac{1-\cos(xy)}{x^2+y^2}=$ \blank[8em]。
+
+\item 曲线 $r=2\cos\theta$，$\theta\in\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$ 的弧长为 \blank[8em]。
+
+\item 点 $(1,0,1)$ 到平面 $x-2y-z+1=0$ 的距离为 \blank[8em]。
+
+\item 平面 $x+2y-2z+3=0$ 与平面 $x-y+z-3=0$ 的夹角余弦值为 \blank[8em]。
+
+\item 设 $z=e^x\ln y$，则
+$\displaystyle \left.\frac{\partial^5 z}{\partial x^2\partial y^3}\right|_{(0,1)}=$ \blank[8em]。
+\end{enumerate}
+
+\examsection{三、（8 分）}
+求由曲线 $y=\sin x$ 和 $y=\cos x$ 以及直线 $x=0$ 和 $x=\dfrac{\pi}{2}$ 所围成图形面积。
+
+\examsection{四、（8 分）}
+求过点 $(2,0,-3)$ 且与直线
+$\begin{cases}x-2y+4z=7,\\3x+5y-2z=-1\end{cases}$
+垂直的平面方程。
+
+\examsection{五、（8 分）}
+设函数 $\varphi(x)$ 连续且满足方程
+$\displaystyle \varphi(x)=\sin x+\int_0^x\varphi(t)\,\mathrm{d}t$，
+求 $\varphi(x)$。
+
+\examsection{六、（8 分）}
+求微分方程
+$\displaystyle \frac{\mathrm{d}^2y}{\mathrm{d}x^2}
+-2\frac{\mathrm{d}y}{\mathrm{d}x}-3y=3x+2$
+的通解。
+
+\examsection{七、（8 分）}
+设 $z=e^{xy}+f(x-y)$，其中 $f$ 为可微函数，求 $\mathrm{d}z$。
+
+\examsection{八、（10 分）}
+求解初值问题
+\[
+\begin{cases}
+\dfrac{\mathrm{d}y}{\mathrm{d}x}=\dfrac{x}{y}+\dfrac{y}{x},\\[0.4em]
+y(1)=2.
+\end{cases}
+\]
+
+\examsection{九、（12 分）}
+设函数
+\[
+f(x,y)=
+\begin{cases}
+\dfrac{x^3-y^3}{x^2+y^2}, & (x,y)\ne(0,0),\\[0.6em]
+0, & (x,y)=(0,0),
+\end{cases}
+\]
+判断该函数在 $(0,0)$ 处是否连续，偏导数是否存在，以及是否可微，并说明理由。
+
+\examsection{十、（8 分）}
+已知曲线 $\Gamma$ 为球面 $x^2+y^2+z^2=5$ 和平面 $z=1$ 的交线，求 $\Gamma$ 绕 $y$ 轴旋转一周所得到的曲面方程。
+
+\end{document}

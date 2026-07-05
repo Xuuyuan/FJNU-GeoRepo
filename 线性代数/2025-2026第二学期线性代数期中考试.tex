@@ -1,0 +1,165 @@
+\documentclass[UTF8,12pt]{ctexart}
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[colorlinks,
+linkcolor=black,
+anchorcolor=black,
+citecolor=black
+]{hyperref}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\linespread{1.15}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{第 \thepage\ 页，共 \pageref{LastPage} 页}
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\blank}[1][4em]{\underline{\hspace{#1}}}
+\newcommand{\examsection}[1]{\par\addvspace{1em}\noindent{\large\bfseries #1}\par\addvspace{0.4em}}
+\newcommand{\choice}[4]{%
+  \begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+  (A) #1 & (B) #2\\[0.4em]
+  (C) #3 & (D) #4
+  \end{tabular}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries 《线性代数》期中考试试题}\\[0.5em]
+  {\large 2025--2026 学年 第二学期 / 福建师范大学数学与统计学院 }\\[0.3em]
+  排版：\href{https://github.com/Xuuyuan}{@许愿} -- \href{https://wefjnu.nekoark.com}{WeFJNU}
+\end{center}
+
+\noindent 说明：试卷中的矩阵默认都是实矩阵，$E$ 为单位矩阵。
+
+\examsection{一、单项选择题（每小题 3 分，共 18 分）}
+\begin{enumerate}[label={\arabic*、},leftmargin=2em,itemsep=0.8em]
+\item 设 $A,B,C$ 都是 $n$ 阶方阵，则下列结论正确的是（\quad）
+
+\choice{$(A+B)^{-1}=A^{-1}+B^{-1}$；}
+{若 $AC=BC$ 且 $C\ne O$，则 $A=B$；}
+{$|ABC|=|CBA|$；}
+{$A^2-B^2=(A-B)(A+B)$。}
+
+\item 设
+\[
+D_1=\begin{vmatrix}
+a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}\\
+a_{31}&a_{32}&a_{33}
+\end{vmatrix},\quad
+D_2=\begin{vmatrix}
+2a_{11}&a_{12}-3a_{13}&a_{13}\\
+2a_{21}&a_{22}-3a_{23}&a_{23}\\
+2a_{31}&a_{32}-3a_{33}&a_{33}
+\end{vmatrix},
+\]
+则以下结论正确的是（\quad）
+
+\choice{$D_2=-3D_1$；}{$D_2=2D_1$；}{$D_2=-6D_1$；}{$D_2=5D_1$。}
+
+\item 若 $4\times 5$ 矩阵 $A$ 的秩为 3，以下说法\textbf{未必}正确的是（\quad）
+
+\choice{$A$ 仅有一个三阶不为零的子式；}
+{$A$ 至少有一个二阶子式不等于零；}
+{$A$ 的所有 4 阶子式都等于 0；}
+{$A$ 和 $\begin{pmatrix}O&O\\O&E_3\end{pmatrix}$ 等价。}
+
+\item 设矩阵 $A=(\alpha_1,\alpha_2,\alpha_3)$ 经过初等行变换可化为
+$\begin{pmatrix}1&1&3\\0&1&1\end{pmatrix}$，则下列说法\textbf{错误}的是（\quad）
+
+\choice{齐次线性方程组 $AX=0$ 有非零解；}
+{$R(A)=2$；}
+{$A$ 的等价标准形为 $\begin{pmatrix}1&0&0\\0&1&0\end{pmatrix}$；}
+{齐次线性方程组 $A^{\mathrm T}X=0$ 有非零解。}
+
+\item 设 $n$ 阶方阵 $A$ 满足 $R(A)<n$，则下列说法\textbf{错误}的是（\quad）
+
+\begin{enumerate}[label=(\Alph*),leftmargin=2em,itemsep=0.2em]
+\item $A$ 中可能有一行元素全为 0；
+\item $A$ 中可能有两列元素对应成比例；
+\item 齐次线性方程组 $AX=0$ 有非零解；
+\item 非齐次线性方程组 $AX=\beta$ 可能有唯一解。
+\end{enumerate}
+
+\newpage
+\item 设矩阵 $A=(2)$，$B=\begin{pmatrix}1&1\\1&4\end{pmatrix}$，则分块矩阵
+$\begin{pmatrix}O&A\\B&O\end{pmatrix}$ 的伴随矩阵
+$\begin{pmatrix}O&A\\B&O\end{pmatrix}^{*}$ 为（\quad）
+
+\begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+(A) $\begin{pmatrix}0&8&-2\\0&-2&2\\3&0&0\end{pmatrix}$ &
+(B) $\begin{pmatrix}0&0&3\\8&-2&0\\-2&2&0\end{pmatrix}$ \\[1.6em]
+(C) $\begin{pmatrix}0&0&\frac12\\\frac43&-\frac13&0\\-\frac13&\frac13&0\end{pmatrix}$ &
+(D) $\begin{pmatrix}0&\frac43&-\frac13\\0&-\frac13&\frac13\\\frac12&0&0\end{pmatrix}$
+\end{tabular}
+\end{enumerate}
+
+\examsection{二、填空题（每小题 3 分，共 18 分）}
+\begin{enumerate}[label={\arabic*、},leftmargin=2em,itemsep=0.8em]
+\item 已知 2 阶方阵 $X$ 满足 $\begin{pmatrix}1&0\\-1&1\end{pmatrix}X\begin{pmatrix}0&1\\1&0\end{pmatrix}^{2026}=\begin{pmatrix}3&1\\0&-1\end{pmatrix}$，则 $X=$ \blank[8em]。
+
+\item 设行列式
+\[
+|A|=\begin{vmatrix}
+1&0&1&0\\
+2&0&4&1\\
+1&3&4&2\\
+4&3&3&-1
+\end{vmatrix},
+\]
+$M_{ij}$ 和 $A_{ij}$ $(i,j=1,2,3,4)$ 分别为 $|A|$ 的 $(i,j)$ 元的余子式和代数余子式，则
+$2A_{31}+3A_{32}-2M_{34}=$ \blank[8em]。
+
+\item 设 $A$ 为 3 阶方阵且满足 $A^2-2A-6E=0$，则 $(A-3E)^{-1}=$ \blank[8em]。
+
+\item 设 $A$ 为 4 阶方阵且 $|A|=3$，则 $\left|A+AE(1,3(2))\right|=$ \blank[8em]。
+
+\item 设矩阵
+\[
+A=\begin{pmatrix}1&1&1\\0&2&1\\0&0&3\end{pmatrix},\quad
+B=\begin{pmatrix}1&1&1\\2&3&4\\3&3&3\end{pmatrix},\quad
+C=\begin{pmatrix}0&0&1\\0&2&1\\3&1&1\end{pmatrix},
+\]
+则 $R(ABC)=$ \blank[8em]。
+
+\item 已知齐次线性方程组 $\begin{cases}x_1+x_2+x_3=0,\\x_1+2x_2+ax_3=0,\\x_1+4x_2+a^2x_3=0\end{cases}$ 有非零解，则 $a=$ \blank[8em]。
+\end{enumerate}
+
+\newpage
+\examsection{三、（12 分）}
+设矩阵
+\[
+A=\begin{pmatrix}2&3&0\\1&2&0\\0&0&-1\end{pmatrix},\quad
+B=\begin{pmatrix}1&1&0\\2&2&0\\0&0&1\end{pmatrix},
+\]
+求 $\left|AB^{\mathrm T}-2E\right|$。
+
+\examsection{四、（20 分）}
+已知 $\alpha=(1,0,2)^{\mathrm T}$，$\beta=(0,1,0)^{\mathrm T}$，$A=E+\alpha\beta^{\mathrm T}$。
+\begin{enumerate}[label=(\arabic*),leftmargin=2em,itemsep=0.6em]
+\item 证明 $A$ 可逆并求 $A^{-1}$；
+\item 将 $A$ 的伴随矩阵 $A^{*}$ 按列分块成 $A^{*}=(A_1,A_2,A_3)$，求 $A(A_1+2A_2+3A_3)$；
+\item 若 $f(x)=5(x-1)^3-3(x-1)^2+2(x-1)-4$，求 $f(A)$。
+\end{enumerate}
+
+\examsection{五、（12 分）}
+已知
+\[
+A=\begin{pmatrix}1&1&-1\\-1&1&1\\1&-1&1\end{pmatrix},
+\]
+$A^{*}$ 是 $A$ 的伴随矩阵，矩阵 $X$ 满足 $A^{*}X=A^{-1}+2X$，求矩阵 $X$。
+
+\examsection{六、（12 分）}
+用初等行变换求解非齐次线性方程组 $\begin{cases}x_1-x_2+2x_4=-1,\\2x_1-2x_2-x_3+2x_4=-2,\\x_1-2x_2+x_3+x_4=2,\\3x_1-4x_2+x_3+5x_4=0.\end{cases}$
+
+\examsection{七、（8 分）}
+如果 $n$ 阶方阵 $A$ 满足 $A^2=A$，则称 $A$ 是一个\textbf{幂等矩阵}。已知 $n$ 阶方阵 $A,B$ 都是幂等矩阵，证明：$A+B$ 是幂等矩阵的充分必要条件是 $AB=BA=O$。
+
+\end{document}

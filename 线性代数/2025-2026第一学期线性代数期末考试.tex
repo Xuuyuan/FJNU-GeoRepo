@@ -1,0 +1,140 @@
+\documentclass[UTF8,12pt]{ctexart}
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[colorlinks,
+linkcolor=black,
+anchorcolor=black,
+citecolor=black
+]{hyperref}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\linespread{1.15}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{第 \thepage\ 页，共 \pageref{LastPage} 页}
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\blank}[1][4em]{\underline{\hspace{#1}}}
+\newcommand{\examsection}[1]{\par\addvspace{1em}\noindent{\large\bfseries #1}\par\addvspace{0.4em}}
+\newcommand{\choice}[4]{%
+  \begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+  (A) #1 & (B) #2\\[0.4em]
+  (C) #3 & (D) #4
+  \end{tabular}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries 《线性代数》期末考试试题}\\[0.5em]
+  {\large 2025--2026 学年 第一学期 / 福建师范大学}\\[0.3em]
+  排版：\href{https://github.com/Xuuyuan}{@许愿} -- \href{https://wefjnu.nekoark.com}{WeFJNU}
+\end{center}
+
+\noindent 考试年级：2024 级、2025 级\quad 任课教师：陈兰清等
+
+\noindent 闭卷考试\quad 考试时间：2026 年 1 月 12 日 9 时至 11 时。
+
+\noindent 说明：下列试题中，$E$ 为单位矩阵，$O$ 为零矩阵。
+
+\examsection{一、单项选择题（每小题 3 分，共 18 分）}
+\begin{enumerate}[label={\arabic*、},leftmargin=2em,itemsep=0.8em]
+\item 设行列式 $\begin{vmatrix}a_1&b_1&c_1\\a_2&b_2&c_2\\a_3&b_3&c_3\end{vmatrix}=1$，则 $\begin{vmatrix}c_1&b_1+2c_1&a_1+2b_1-c_1\\c_2&b_2+2c_2&a_2+2b_2-c_2\\c_3&b_3+2c_3&a_3+2b_3-c_3\end{vmatrix}=$（\quad）。
+
+\choice{$-2$；}{$2$；}{$-1$；}{$1$。}
+
+\item 设 $n$ 阶方阵 $A$ 和 $B$ 满足等式 $AB=O$，则有（\quad）。
+
+\choice{$R(A)+R(B)\le n$；}{$A+B=O$；}{$|A|+|B|=0$；}{$A=O$ 或者 $B=O$。}
+
+\item 设 $A$ 为 $m\times n$ 矩阵，$m<n$，则下列结论\textbf{错误}的是（\quad）。
+
+\choice{齐次线性方程组 $AX=0$ 有非零解；}
+{$R(A)=R(A^{\mathrm T})$；}
+{对任意数 $k$，$R(kA)=kR(A)$；}
+{$AA^{\mathrm T}$ 是对称矩阵。}
+
+\item 已知三维向量组 $\alpha_1,\alpha_2,\alpha_3$ 的秩为 2，若 $\beta_1=\alpha_1+\alpha_2+\alpha_3,\beta_2=\alpha_2+\alpha_3,\beta_3=\alpha_3$，则下列说法\textbf{错误}的是（\quad）。
+
+\choice{$\alpha_1,\alpha_2,\alpha_3$ 线性相关；}
+{$\alpha_1,\alpha_2,\alpha_3$ 可由 $\beta_1,\beta_2,\beta_3$ 线性表示；}
+{$R(\beta_1,\beta_2,\beta_3)=2$；}
+{$\beta_1,\beta_2,\beta_3$ 线性无关。}
+
+\item 设矩阵 $A$ 和 $B$ 均为 $n$ 阶方阵，且 $AB=E$，则（\quad）。
+
+\choice{$|A|=|B|$；}
+{若 $\lambda$ 是 $A$ 的特征值，则 $\lambda^{-1}$ 是 $B$ 的特征值；}
+{矩阵 $A$ 的列向量组线性相关；}
+{线性方程组 $BX=0$ 有非零解。}
+
+\item 设 $n$ 阶实对称阵 $A$ 满足 $A^2+A-6E=O$，且 $A$ 的特征值全为正数，则下列结论\textbf{错误}的是（\quad）。
+
+\choice{$A=2E$；}{$A^{-1}=\dfrac{1}{6}(A+E)$；}{$|A+3E|=0$；}{$A$ 为正定矩阵。}
+\end{enumerate}
+
+\newpage
+\examsection{二、填空题（每小题 3 分，共 18 分）}
+\begin{enumerate}[label={\arabic*、},leftmargin=2em,itemsep=0.8em]
+\item 已知 $D=\begin{vmatrix}a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}\end{vmatrix}=3$，$A_{ij}$ 是 $D$ 的元素 $a_{ij}$ 的代数余子式 $(i,j=1,2,3)$，则 $(a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13})^2+(a_{21}A_{11}+a_{22}A_{12}+a_{23}A_{13})^2+(a_{13}A_{11}+a_{23}A_{21}+a_{33}A_{31})^2=$ \blank[8em]。
+
+\item 设 $A,B$ 是 2 阶方阵，且 $AB+E=A^2-B$，$A=\begin{pmatrix}3&0\\0&2\end{pmatrix}$，则 $B=$ \blank[8em]。
+
+\item 设 3 阶矩阵 $A$ 的特征值为 $\lambda_1=2,\lambda_2=-2,\lambda_3=1$，对应的特征向量依次为 $P_1=\begin{pmatrix}0\\1\\0\end{pmatrix},P_2=\begin{pmatrix}1\\0\\0\end{pmatrix},P_3=\begin{pmatrix}0\\0\\1\end{pmatrix}$，则 $A=$ \blank[8em]。
+
+\item 已知单位向量 $\alpha$ 满足 $[\alpha,\beta]=2$，则 $[3\alpha+2\beta,-4\alpha]=$ \blank[8em]。
+
+\item 若 4 阶方阵 $A$ 与 $B$ 相似，$A$ 的特征值为 $\tfrac{1}{2},\tfrac{1}{3},\tfrac{1}{4},\tfrac{1}{5}$。\\
+则行列式 $|B^{-1}-E|=$ \blank[8em]。
+
+\item 已知三元二次型 $f(x_1,x_2,x_3)=(x_1+x_2)^2+(k-1)x_2^2+kx_3^2$ 正定，则 $k$ 的取值范围为 \blank[8em]。
+\end{enumerate}
+
+\examsection{三、（14 分）}
+设矩阵
+\[
+A=\begin{pmatrix}
+2&0&4&3&2\\
+1&-2&4&0&3\\
+1&1&1&1&0\\
+2&1&3&2&1
+\end{pmatrix}
+\]
+的列向量组为 $\alpha_1,\alpha_2,\alpha_3,\alpha_4,\alpha_5$。
+\begin{enumerate}[label=(\arabic*),leftmargin=2em,itemsep=0.6em]
+\item 求 $\alpha_1,\alpha_2,\alpha_3,\alpha_4,\alpha_5$ 的一个最大无关组，并把其余向量用该最大无关组线性表示；
+\item 判定 $\alpha_4$ 是否可由其余向量线性表示，并说明理由。
+\end{enumerate}
+
+\newpage
+\examsection{四、（14 分）}
+设三维向量空间 $\mathbb R^3$ 的两个基为 $\alpha_1=(1,0,1)^{\mathrm T},\alpha_2=(1,0,-1)^{\mathrm T},\alpha_3=(1,1,1)^{\mathrm T}$；$\beta_1=(1,2,1)^{\mathrm T},\beta_2=(2,3,4)^{\mathrm T},\beta_3=(3,7,1)^{\mathrm T}$。
+\begin{enumerate}[label=(\arabic*),leftmargin=2em,itemsep=0.6em]
+\item 求由基 $\alpha_1,\alpha_2,\alpha_3$ 到基 $\beta_1,\beta_2,\beta_3$ 的过渡矩阵 $P$；
+\item 向量 $\gamma$ 在基 $\beta_1,\beta_2,\beta_3$ 下的坐标为 $(1,-1,2)$，求 $\gamma$ 在基 $\alpha_1,\alpha_2,\alpha_3$ 下的坐标；
+\item 求向量组 $P(\alpha_1+\beta_1),P(\alpha_2+\beta_2)$ 的秩。
+\end{enumerate}
+
+\examsection{五、（14 分）}
+对于非齐次线性方程组
+\[
+\begin{cases}
+\lambda x_1+x_2+x_3=1,\\
+x_1+\lambda x_2+x_3=1,\\
+x_1+x_2+\lambda x_3=\mu,
+\end{cases}
+\]
+其中 $\lambda\ne 1$，问：当 $\lambda,\mu$ 为何值时，方程组有唯一解、无解、有无穷多解？当方程组有无穷多解时，求其特解及其导出组的基础解系，并用它们表示方程组的通解。
+
+\examsection{六、（16 分）}
+用正交变换化二次型 $f(x_1,x_2,x_3)=x_1^2+x_2^2+x_3^2+2x_1x_2+2x_1x_3-2x_2x_3$ 为标准形，并写出所做的正交变换及相应的标准形。
+
+\examsection{七、（6 分）}
+设 $A=(\alpha_1,\alpha_2,\alpha_3),B=(\alpha_1,\alpha_2,\alpha_4)$，其中 $\alpha_i\ (i=1,2,3,4)$ 均为 3 维列向量。已知齐次线性方程组 $AX=0$ 只有零解，$|B|=0$，证明：向量组 $\alpha_1,\alpha_2,\alpha_3-\alpha_4$ 线性无关。
+
+\end{document}
