@@ -1,0 +1,38 @@
+{
+  "name": "da_webgis",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Phase 1 shell for the Tingping Township WebGIS prototype.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icebakacat/geoai-risk-webgis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/icebakacat/geoai-risk-webgis/issues"
+  },
+  "homepage": "https://github.com/icebakacat/geoai-risk-webgis#readme",
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-leaflet": "^5.0.0",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10"
+  }
+}

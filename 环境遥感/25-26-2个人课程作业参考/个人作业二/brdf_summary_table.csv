@@ -1,0 +1,5 @@
+﻿Forest type,Band,Min reflectance,Min VZA,Max reflectance,Max VZA
+Old Black Spruce,R670,0.0134,65.0,0.0812,-40.0
+Old Black Spruce,R865,0.118,50.0,0.4599,-40.0
+Young Jack Pine,R670,0.0063,80.0,0.0478,-40.0
+Young Jack Pine,R865,0.102,45.0,0.4562,-40.0

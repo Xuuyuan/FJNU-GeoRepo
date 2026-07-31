@@ -1,0 +1,305 @@
+#VRML V2.0 utf8
+
+# 子文件：station.wrl
+
+WorldInfo {
+  title "水文观测站与监测设备子场景"
+}
+
+Group {
+  children [
+    Transform {
+      translation 2.0 0.58 -0.9
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.78 0.78 0.70
+              specularColor 0.25 0.25 0.22
+            }
+          }
+          geometry Box { size 2.2 0.95 1.35 }
+        }
+        Transform {
+          translation 0 0.66 0
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.42 0.19 0.10
+                  specularColor 0.20 0.10 0.06
+                }
+              }
+              geometry Box { size 2.45 0.28 1.55 }
+            }
+          ]
+        }
+        Transform {
+          translation -0.45 -0.18 0.69
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.16 0.11 0.08
+                  specularColor 0.12 0.10 0.08
+                }
+              }
+              geometry Box { size 0.42 0.58 0.04 }
+            }
+          ]
+        }
+        Transform {
+          translation 0.42 0.08 0.70
+          children [
+            DEF win1 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.35 0.68 0.92
+                  emissiveColor 0.03 0.08 0.12
+                  transparency 0.18
+                }
+              }
+              geometry Box { size 0.46 0.30 0.045 }
+            }
+          ]
+        }
+        Transform { translation 0.92 0.08 0.70 children [ USE win1 ] }
+      ]
+    }
+
+    Transform {
+      translation 2.0 1.44 -0.9
+      rotation 1 0 0 -0.55
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.02 0.08 0.16
+              specularColor 0.40 0.55 0.70
+              shininess 0.7
+            }
+          }
+          geometry Box { size 1.10 0.05 0.70 }
+        }
+      ]
+    }
+
+    Transform {
+      translation 3.35 0.92 -0.15
+      children [
+        Shape {
+          appearance Appearance {
+            material Material { diffuseColor 0.18 0.18 0.18 }
+          }
+          geometry Cylinder { radius 0.05 height 1.65 }
+        }
+        Transform {
+          translation 0 0.88 0
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.12 0.42 0.72
+                  emissiveColor 0.01 0.06 0.12
+                }
+              }
+              geometry Box { size 0.42 0.24 0.32 }
+            }
+          ]
+        }
+        Transform {
+          translation 0 1.15 0
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.88 0.88 0.82
+                  specularColor 0.35 0.35 0.32
+                }
+              }
+              geometry Cylinder { radius 0.20 height 0.18 }
+            }
+          ]
+        }
+      ]
+    }
+
+    Transform {
+      translation -1.85 0.85 -1.1
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.48 0.50 0.52
+              specularColor 0.28 0.28 0.30
+            }
+          }
+          geometry Cylinder { radius 0.07 height 1.70 }
+        }
+
+        DEF leida Transform {
+          translation 0 0.96 0
+          children [
+            Transform {
+              rotation 1 0 0 1.5708
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                      diffuseColor 0.88 0.90 0.92
+                      specularColor 0.70 0.75 0.80
+                      shininess 0.75
+                    }
+                  }
+                  geometry Cone { bottomRadius 0.52 height 0.30 }
+                }
+              ]
+            }
+            Transform {
+              translation 0 0 0.42
+              rotation 1 0 0 1.5708
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                      diffuseColor 0.20 0.20 0.22
+                      specularColor 0.45 0.45 0.48
+                    }
+                  }
+                  geometry Cylinder { radius 0.035 height 0.72 }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+    Transform {
+      translation -2.75 0.62 0.35
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.92 0.92 0.80
+              transparency 0.25
+            }
+          }
+          geometry Cylinder { radius 0.20 height 0.80 }
+        }
+        Transform {
+          translation 0 0.50 0
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.18 0.50 0.85
+                  emissiveColor 0.02 0.10 0.18
+                }
+              }
+              geometry Cylinder { radius 0.24 height 0.10 }
+            }
+          ]
+        }
+      ]
+    }
+
+    Transform {
+      translation -2.75 1.30 0.35
+      children [
+        Billboard {
+          axisOfRotation 0 1 0
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 1 1 1
+                  emissiveColor 0.65 0.85 1
+                }
+              }
+              geometry Text {
+                string [ "雨量计" ]
+                fontStyle FontStyle {
+                  family "SANS"
+                  justify [ "MIDDLE", "MIDDLE" ]
+                  size 0.16
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+
+    Transform {
+      translation -1.85 2.00 -1.1
+      children [
+        Billboard {
+          axisOfRotation 0 1 0
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 1 1 1
+                  emissiveColor 0.70 0.88 1
+                }
+              }
+              geometry Text {
+                string [ "旋转雷达" ]
+                fontStyle FontStyle {
+                  family "SANS"
+                  justify [ "MIDDLE", "MIDDLE" ]
+                  size 0.16
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+
+    Transform {
+      translation 2.0 1.85 -0.9
+      children [
+        Billboard {
+          axisOfRotation 0 1 0
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 1 1 1
+                  emissiveColor 0.72 0.88 1
+                }
+              }
+              geometry Text {
+                string [ "水文观测站" "采集水位、雨量与遥感数据" ]
+                fontStyle FontStyle {
+                  family "SANS"
+                  justify [ "MIDDLE", "MIDDLE" ]
+                  size 0.18
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+DEF t_ld TimeSensor {
+  cycleInterval 4
+  loop TRUE
+}
+
+DEF ld_rot OrientationInterpolator {
+  key [ 0, 0.5, 1 ]
+  keyValue [
+    0 1 0 0,
+    0 1 0 3.14159,
+    0 1 0 6.28318
+  ]
+}
+
+ROUTE t_ld.fraction_changed TO ld_rot.set_fraction
+ROUTE ld_rot.value_changed TO leida.set_rotation

@@ -1,0 +1,58 @@
+《虚拟地理环境》期末个人 VRML 作业说明
+
+作品名称：虚拟山谷水文观测站
+
+一、作品主题
+本作品以“虚拟山谷水文观测站”为主题，构建一个小型虚拟地理环境场景。场景包含山谷地形、河道、生态蓄水池、植被、水文观测站、雨量计、旋转雷达、云团、太阳和山洪预警交互按钮，用于表现虚拟现实系统中的建模、材质、场景组织、动画、交互与空间观察。
+
+二、文件结构
+1. main.wrl
+   主场景文件。包含 WorldInfo、NavigationInfo、Viewpoint、Background、全局灯光、交互按钮、预警提示面板，并通过 Inline 引入子场景。
+2. terrain.wrl
+   地形、水体与植被子场景。包含 ElevationGrid 山谷地形、河流、蓄水池、树木、石块、文字标注，以及水位和水流动画。
+3. station.wrl
+   水文观测站与设备子场景。包含观测站建筑、太阳能板、雨量计、监测杆、旋转雷达、文字标注，以及雷达旋转动画。
+4. weather.wrl
+   天空动态子场景。包含太阳、云团、点光源、云团移动动画和太阳方位变化动画。
+5. 作品说明.txt
+   本说明文档。
+
+三、主要功能
+1. 可通过 VRML 浏览器打开 main.wrl 进入完整场景。
+2. 可使用预设 Viewpoint 在 View_All、View_Station_Button、View_River 之间切换。视点名称使用英文，避免部分 VRML 查看器菜单乱码。
+3. 山谷地形使用 ElevationGrid 表现，水体使用透明材质表现。
+4. 建筑与设备使用 Box、Cylinder、Cone、Sphere 等基础几何体组合建模。
+5. 文字标注说明主要地理要素和设备功能。
+6. 点击红色预警按钮后，会触发一段明显的山洪过程演示：预警提示面板升起、红色警灯闪烁、浑浊洪峰沿河道向下游推进、河谷出现临时淹没范围、两侧坡面径流箭头向河道汇集。
+
+四、使用的 VRML 主要节点
+1. 场景组织：Group、Transform、Inline、DEF、USE。
+2. 几何建模：Shape、Box、Cylinder、Cone、Sphere、ElevationGrid、Text。
+3. 外观材质：Appearance、Material，设置 diffuseColor、emissiveColor、specularColor、shininess、transparency。
+4. 环境设置：WorldInfo、NavigationInfo、Viewpoint、Background。
+5. 灯光效果：DirectionalLight、PointLight、SpotLight。
+6. 动画节点：TimeSensor、PositionInterpolator、OrientationInterpolator、ColorInterpolator、ROUTE。
+7. 交互节点：TouchSensor。
+
+五、动画与交互设计
+1. 水位变化动画：terrain.wrl 中 t_water 驱动 water_updn，使河道和蓄水池水面周期性升降。
+2. 水流方向动画：terrain.wrl 中 t_liu 驱动 liu_path，使蓝色水流箭头沿河道移动。
+3. 雷达旋转动画：station.wrl 中 t_ld 驱动 ld_rot，使观测站雷达持续扫描。
+4. 云团移动动画：weather.wrl 中 t_yun 驱动 yun_path，使云团在山谷上方缓慢飘移。
+5. 太阳方位动画：weather.wrl 中 t_sun 驱动 sun_rot，使太阳位置轻微变化。
+6. 山洪交互演示：main.wrl 中 btn_touch 接收鼠标点击，触发 t_yj，进而驱动预警面板升降、红色按钮灯闪烁、红色点光源闪烁、洪峰推进、淹没范围显示和坡面径流汇集。
+
+六、运行方法
+1. 使用支持 VRML97/VRML 2.0 的浏览器或查看器打开 main.wrl。
+2. 推荐打开文件：
+   D:\25-26-2\3-1-4-虚拟地理环境（江辉仙）\VRML期末个人作业\main.wrl
+3. 打开后默认进入 View_All 总览视角，可一次看到整体场景；也可切换到 View_Station_Button 和 View_River 观察细节。点击右前方红色按钮可触发山洪过程与预警交互演示。
+
+七、作业要求对应情况
+1. 使用 VRML 2.0：所有 .wrl 文件均以 #VRML V2.0 utf8 开头。
+2. 与虚拟地理环境相关：主题为山谷水文观测站。
+3. 包含地形、水体、自然要素、建筑设备和文字标注。
+4. 包含 Transform、Shape、Appearance、Material、Group、DEF/USE、Viewpoint、NavigationInfo、Background、DirectionalLight、PointLight、SpotLight、TimeSensor、PositionInterpolator、OrientationInterpolator、ROUTE。
+5. 包含多个动画：水位变化、水流箭头、雷达旋转、云团移动、太阳方位变化、预警灯闪烁、洪峰推进、坡面径流汇集。
+6. 包含交互：点击红色按钮触发预警面板、灯光变化、浑浊洪峰、临时淹没范围和坡面径流。
+7. 使用 Inline：main.wrl 引入 terrain.wrl、station.wrl、weather.wrl。
