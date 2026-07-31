@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="福建师范大学地理科学课程资料存档——一个轻量、清晰的资料导航。"
+    />
+    <title>FJNU-GeoRepo · 地理科学专业课程资料库</title>
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#resources">跳到资料列表</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>
+          <strong>福建师范大学-地理科学专业课程资料存档</strong>
+        </span>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="contour contour-one" aria-hidden="true"></div>
+        <div class="contour contour-two" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <h1>让散落的课程资料，<br /><em>重新成为一张地图。</em></h1>
+          <p class="hero-intro">
+            汇集往年试题、复习笔记、教学课件与课程作业。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#resources">查找资料</a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/Xuuyuan/FJNU-GeoRepo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              前往仓库 <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/Xuuyuan/FJNU-GeoRepo-BookStore"
+              target="_blank"
+              rel="noreferrer"
+            >
+              电子教材仓库 <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="course-dashboard" aria-live="polite">
+            <span>当前收录</span>
+            <strong id="course-count">—</strong>
+            <span>门课程</span>
+          </div>
+          <p class="traffic-note">
+            <span aria-hidden="true">●</span>
+            由于仓库位于 GitHub，可能需要科学上网才能正常访问
+          </p>
+        </div>
+
+        <aside class="map-card" aria-label="资料库概览">
+          <div class="map-card-top">
+            <span>26.10°N</span>
+            <span>119.30°E</span>
+          </div>
+          <div class="map-stage" aria-hidden="true">
+            <div class="map-orbit orbit-one"></div>
+            <div class="map-orbit orbit-two"></div>
+            <div class="map-pin"><i></i></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="resource-section" id="resources" aria-labelledby="resource-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="resource-title">资料库</h2>
+          </div>
+          <p>逐级打开目录，查看其中的子目录与文件。</p>
+        </div>
+
+        <div class="search-panel">
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <span class="sr-only">搜索资料库</span>
+            <input id="search-input" type="search" placeholder="搜索一级目录……" autocomplete="off" />
+            <kbd>Ctrl K</kbd>
+          </label>
+        </div>
+
+        <div class="library-toolbar">
+          <div class="breadcrumb" id="breadcrumb" aria-label="当前位置"></div>
+          <p><strong id="result-count">0</strong><span id="result-unit"> 个一级目录</span></p>
+        </div>
+
+        <div class="directory-heading" id="directory-heading" hidden>
+          <div>
+            <span>当前目录</span>
+            <h3 id="directory-title"></h3>
+          </div>
+          <a id="directory-github-link" href="#" target="_blank" rel="noreferrer">在 GitHub 打开此目录 ↗</a>
+        </div>
+        <div class="directory-grid" id="directory-grid" aria-live="polite"></div>
+        <div class="file-list" id="file-list" aria-live="polite" hidden></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">⌁</span>
+          <h3>没有找到匹配的内容</h3>
+          <p>换一个关键词，或者返回上级目录。</p>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div>
+          <h2>一份由学生共同延续的<br />地理学习档案。</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            本仓库主要收录福建师范大学地理科学（类）相关课程资料，仅用于学习交流与存档。若您愿意补充资料或提出建议，可以直接在 GitHub 仓库下提交 Pull Request 或在下方发送邮件。
+          </p>
+          <div class="about-actions">
+            <a
+              class="button button-light"
+              href="https://github.com/Xuuyuan/FJNU-GeoRepo/pulls"
+              target="_blank"
+              rel="noreferrer"
+            >提交资料 <span aria-hidden="true">↗</span></a>
+            <a href="mailto:xuyuan@fjnu.edu.cn">发送邮件</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
