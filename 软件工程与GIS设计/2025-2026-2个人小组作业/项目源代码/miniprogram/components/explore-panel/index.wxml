@@ -1,0 +1,92 @@
+<view
+  class="stats-panel {{panelCollapsed ? 'stats-panel-collapsed' : ''}}"
+>
+  <view
+    class="panel-handle-zone"
+    bindtap="emitTogglePanel"
+    bindtouchstart="emitPanelTouchStart"
+    bindtouchmove="emitPanelTouchMove"
+    bindtouchend="emitPanelTouchEnd"
+    bindtouchcancel="emitPanelTouchEnd"
+  >
+    <view class="panel-handle"></view>
+    <view class="panel-handle-text">{{panelCollapsed ? '上拉展开功能面板' : '下拉隐藏一半，查看更多地图'}}</view>
+  </view>
+
+  <view class="stats-header">
+    <view>
+      <view class="stats-title">{{exploring ? '正在探索' : '准备出发'}}</view>
+      <view class="stats-subtitle">覆盖率 {{coverageRatio}}</view>
+    </view>
+    <view class="sync-text">{{syncStatusText}}</view>
+  </view>
+
+  <view class="metric-grid">
+    <view class="metric-card">
+      <view class="metric-label">当前状态</view>
+      <view class="metric-value {{exploring ? 'metric-highlight' : ''}}">{{exploreStatusText}}</view>
+    </view>
+    <view class="metric-card">
+      <view class="metric-label">点亮网格</view>
+      <view class="metric-value">{{exploredCount}} / {{totalGridCount}}</view>
+    </view>
+    <view class="metric-card">
+      <view class="metric-label">轨迹点数</view>
+      <view class="metric-value">{{trackPointCount}}</view>
+    </view>
+    <view class="metric-card">
+      <view class="metric-label">发现地标</view>
+      <view class="metric-value">{{visitedPoiCount}}</view>
+    </view>
+  </view>
+
+  <view class="location-card" wx:if="{{debugModeEnabled}}">
+    <view class="location-label">当前位置</view>
+    <view class="location-value">{{currentLocationText}}</view>
+  </view>
+
+  <view class="discover-card" wx:if="{{lastDiscoverPoiName}}">
+    <view class="notice-card-header">
+      <view class="discover-title">最近发现</view>
+      <view class="notice-close-button" catchtap="emitDismissDiscover">
+        <image class="notice-close-icon" src="/images/icons/close.png" mode="aspectFit"></image>
+      </view>
+    </view>
+    <view class="discover-name">{{lastDiscoverPoiName}}</view>
+    <view class="discover-knowledge" wx:if="{{lastDiscoverPoiKnowledge}}">{{lastDiscoverPoiKnowledge}}</view>
+  </view>
+
+  <view class="achievement-card" wx:if="{{lastAchievementName}}">
+    <view class="notice-card-header">
+      <view class="achievement-title">新成就</view>
+      <view class="notice-close-button" catchtap="emitDismissAchievement">
+        <image class="notice-close-icon" src="/images/icons/close.png" mode="aspectFit"></image>
+      </view>
+    </view>
+    <view class="achievement-name">{{lastAchievementName}}</view>
+  </view>
+
+  <view class="debug-card" wx:if="{{debugModeEnabled && debugLatitude && debugLongitude}}">
+    <view class="debug-title">调试坐标</view>
+    <view class="debug-text">纬度：{{debugLatitude}}</view>
+    <view class="debug-text">经度：{{debugLongitude}}</view>
+  </view>
+
+  <view class="button-row">
+    <button class="secondary-button" bindtap="emitLocate" loading="{{locating}}">
+      回到我的位置
+    </button>
+    <button class="secondary-button" bindtap="emitManualSync">
+      立即同步
+    </button>
+  </view>
+
+  <view class="button-row">
+    <button class="ghost-button" bindtap="emitClearTrack">
+      清空本次轨迹
+    </button>
+    <button class="explore-button" bindtap="emitToggleExplore">
+      {{exploring ? '结束探索' : '开始探索'}}
+    </button>
+  </view>
+</view>

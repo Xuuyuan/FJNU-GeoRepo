@@ -1,0 +1,29 @@
+<view class="quiz-page">
+  <view class="quiz-card">
+    <view class="quiz-kicker">Landmark Quiz</view>
+    <view class="quiz-title">{{poiName}}</view>
+    <view class="quiz-description" wx:if="{{description}}">{{description}}</view>
+    <view class="knowledge-card" wx:if="{{knowledge}}">{{knowledge}}</view>
+  </view>
+
+  <view class="status-card warning-card" wx:if="{{errorText}}">
+    <view class="status-title">无法开始答题</view>
+    <view class="status-text">{{errorText}}</view>
+  </view>
+
+  <view class="question-card" wx:else>
+    <view class="question-title">{{question}}</view>
+    <view class="option-list">
+      <button
+        class="option-button {{item.selected ? 'option-button-selected' : ''}}"
+        wx:for="{{options}}"
+        wx:key="option_id"
+        data-option-id="{{item.option_id}}"
+        bindtap="handleSelectOption"
+      >
+        {{item.label}}
+      </button>
+    </view>
+    <button class="submit-button" loading="{{loading}}" bindtap="handleSubmit">提交答案</button>
+  </view>
+</view>

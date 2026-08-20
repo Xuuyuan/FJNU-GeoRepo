@@ -1,0 +1,67 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="8a323d948b0d" name="模块设计与模块结构图">
+    <mxGraphModel dx="923" dy="721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#22334d;fontStyle=1;fontSize=18;" value="模块设计与模块结构图" vertex="1">
+          <mxGeometry height="48" width="660" x="260" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="A" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#426079;fontStyle=1;" value="师大快跑系统" vertex="1">
+          <mxGeometry height="64" width="220" x="480" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="B" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f5ec;strokeColor=#3d775c;fontStyle=1;" value="地图展示模块" vertex="1">
+          <mxGeometry height="64" width="150" x="80" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="C" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f5ec;strokeColor=#3d775c;fontStyle=1;" value="定位轨迹模块" vertex="1">
+          <mxGeometry height="64" width="150" x="260" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="D" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5d2;strokeColor=#9d7b28;fontStyle=1;" value="空间点亮模块" vertex="1">
+          <mxGeometry height="64" width="150" x="440" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="E" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#efe7ff;strokeColor=#7054a4;fontStyle=1;" value="POI与Quiz模块" vertex="1">
+          <mxGeometry height="64" width="150" x="620" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="F" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#efe7ff;strokeColor=#7054a4;fontStyle=1;" value="路线与成就模块" vertex="1">
+          <mxGeometry height="64" width="150" x="800" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="G" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#426079;fontStyle=1;" value="结果展示&lt;br&gt;结算/历史/图鉴/成就&lt;br&gt;看板/排行" vertex="1">
+          <mxGeometry height="100" width="220" x="710" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="H" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe4e4;strokeColor=#a84e4e;fontStyle=1;" value="云端同步&lt;br&gt;profile/grid/poi/session/config" vertex="1">
+          <mxGeometry height="64" width="230" x="450" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="I" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5d2;strokeColor=#9d7b28;fontStyle=1;" value="统计扩展&lt;br&gt;game-progress/stats/leaderboard" vertex="1">
+          <mxGeometry height="64" width="240" x="170" y="474" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="A" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="B" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="A" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="C" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="A" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="D" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="A" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="E" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="A" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="F" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="G" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="D" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="H" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="H" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="I" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="G" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="I" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

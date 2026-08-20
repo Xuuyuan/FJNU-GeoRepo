@@ -1,0 +1,63 @@
+<view class="result-page" wx:if="{{hasSessionResult}}">
+  <view class="hero-card">
+    <view class="hero-tag">本次探索已完成</view>
+    <view class="hero-title">{{campusName}}</view>
+    <view class="hero-subtitle">你的校园空间探索记录已生成</view>
+  </view>
+
+  <view class="metrics-grid">
+    <view class="metric-card metric-card-accent">
+      <view class="metric-label">本次距离</view>
+      <view class="metric-value">{{distanceText}}</view>
+    </view>
+    <view class="metric-card">
+      <view class="metric-label">探索时长</view>
+      <view class="metric-value">{{durationText}}</view>
+    </view>
+    <view class="metric-card">
+      <view class="metric-label">本次点亮</view>
+      <view class="metric-value">{{unlockedGridCount}} 格</view>
+    </view>
+    <view class="metric-card">
+      <view class="metric-label">轨迹点数</view>
+      <view class="metric-value">{{trackPointCount}}</view>
+    </view>
+  </view>
+
+  <view class="summary-card">
+    <view class="card-title">累计进度</view>
+    <view class="summary-row">
+      <text>累计点亮网格</text>
+      <text>{{exploredCount}}</text>
+    </view>
+    <view class="summary-row">
+      <text>累计覆盖率</text>
+      <text>{{coverageRatio}}</text>
+    </view>
+    <view class="summary-row">
+      <text>开始时间</text>
+      <text>{{startTimeText}}</text>
+    </view>
+    <view class="summary-row">
+      <text>结束时间</text>
+      <text>{{endTimeText}}</text>
+    </view>
+  </view>
+
+  <view class="detail-card">
+    <view class="card-title">新发现地标</view>
+    <view class="detail-text">{{discoveredPoiText}}</view>
+  </view>
+
+  <view class="detail-card">
+    <view class="card-title">新完成路线</view>
+    <view class="detail-text">{{completedRouteText}}</view>
+  </view>
+
+  <view class="detail-card achievement-card">
+    <view class="card-title">新解锁成就</view>
+    <view class="detail-text">{{earnedAchievementText}}</view>
+  </view>
+
+  <button class="back-button" bindtap="handleBackToMap">返回地图</button>
+</view>

@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+cloudfunctions/**/node_modules/
+
+# Package-manager debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# WeChat DevTools local output
+.idea/
+.vscode/
+dist/
+miniprogram_npm/
+
+# Debug and test data generated locally
+debug/
+tmp/
+temp/
+logs/
+*.log
+*.tmp
+*.bak
+*.local.*
+database_export-*.json
+*_test_data.*
+*_debug.*

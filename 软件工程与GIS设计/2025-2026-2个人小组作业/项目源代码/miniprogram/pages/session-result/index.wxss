@@ -1,0 +1,124 @@
+page {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.65), transparent 30%),
+    linear-gradient(180deg, #dbeafe 0%, #eff6ff 38%, #f8fafc 100%);
+}
+
+.result-page {
+  min-height: 100vh;
+  padding: 32rpx 24rpx 48rpx;
+  box-sizing: border-box;
+}
+
+.hero-card,
+.summary-card,
+.detail-card {
+  border-radius: 32rpx;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18rpx 48rpx rgba(15, 23, 42, 0.12);
+}
+
+.hero-card {
+  padding: 34rpx 30rpx;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(15, 118, 110, 0.96));
+  color: #ffffff;
+}
+
+.hero-tag {
+  display: inline-flex;
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 22rpx;
+}
+
+.hero-title {
+  margin-top: 22rpx;
+  font-size: 48rpx;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  opacity: 0.92;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16rpx;
+  margin-top: 20rpx;
+}
+
+.metric-card {
+  padding: 24rpx 22rpx;
+  border-radius: 26rpx;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14rpx 36rpx rgba(15, 23, 42, 0.08);
+}
+
+.metric-card-accent {
+  background: linear-gradient(180deg, #eff6ff, #ffffff);
+}
+
+.metric-label {
+  font-size: 22rpx;
+  color: #64748b;
+}
+
+.metric-value {
+  margin-top: 12rpx;
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.summary-card,
+.detail-card {
+  margin-top: 20rpx;
+  padding: 26rpx 24rpx;
+}
+
+.card-title {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20rpx;
+  margin-top: 18rpx;
+  font-size: 24rpx;
+  color: #334155;
+}
+
+.detail-text {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.achievement-card {
+  background: linear-gradient(180deg, #fffbeb, #ffffff);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28rpx;
+  height: 92rpx;
+  line-height: 1.2;
+  border-radius: 999rpx;
+  background: linear-gradient(135deg, #2563eb, #0f766e);
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: 700;
+  box-shadow: 0 14rpx 30rpx rgba(37, 99, 235, 0.2);
+}

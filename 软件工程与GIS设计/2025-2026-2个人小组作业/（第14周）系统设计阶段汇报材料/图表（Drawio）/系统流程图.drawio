@@ -1,0 +1,64 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="17b870f8922f" name="系统流程图">
+    <mxGraphModel dx="917" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#22334d;fontStyle=1;fontSize=18;" value="系统流程图" vertex="1">
+          <mxGeometry height="48" width="660" x="260" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="A" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#426079;fontStyle=1;" value="系统启动" vertex="1">
+          <mxGeometry height="64" width="150" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#426079;fontStyle=1;" value="初始化云环境" vertex="1">
+          <mxGeometry height="64" width="150" x="260" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="C" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f5ec;strokeColor=#3d775c;fontStyle=1;" value="进入首页地图" vertex="1">
+          <mxGeometry height="64" width="150" x="440" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="D" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f5ec;strokeColor=#3d775c;fontStyle=1;" value="加载缓存&lt;br&gt;云端进度" vertex="1">
+          <mxGeometry height="64" width="150" x="620" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="E" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5d2;strokeColor=#9d7b28;fontStyle=1;" value="探索状态机&lt;br&gt;采样/点亮/反馈" vertex="1">
+          <mxGeometry height="64" width="180" x="800" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="F" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#efe7ff;strokeColor=#7054a4;fontStyle=1;" value="poi-quiz&lt;br&gt;路线/成就判定" vertex="1">
+          <mxGeometry height="64" width="180" x="800" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="G" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5d2;strokeColor=#9d7b28;fontStyle=1;" value="结束探索&lt;br&gt;生成结算" vertex="1">
+          <mxGeometry height="64" width="150" x="620" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="H" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe4e4;strokeColor=#a84e4e;fontStyle=1;" value="云同步&lt;br&gt;页面回看" vertex="1">
+          <mxGeometry height="64" width="150" x="440" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="I" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#426079;fontStyle=1;" value="历史/图鉴/成就中心&lt;br&gt;探索看板/排行榜" vertex="1">
+          <mxGeometry height="64" width="220" x="130" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="A" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="B" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="B" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="C" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="C" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="D" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="D" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="E" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="E" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="F" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="F" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="G" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="G" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="H" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="H" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#566478;strokeWidth=2;" target="I" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

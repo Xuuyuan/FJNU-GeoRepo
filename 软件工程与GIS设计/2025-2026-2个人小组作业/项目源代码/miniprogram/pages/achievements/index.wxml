@@ -1,0 +1,57 @@
+<view class="achievement-page">
+  <view class="hero-card">
+    <view class="hero-kicker">Achievement Center</view>
+    <view class="hero-title">成就中心</view>
+    <view class="hero-subtitle">已解锁 {{unlockedCount}} / {{totalCount}} 个校园成就</view>
+    <view class="progress-track">
+      <view class="progress-fill" style="width: {{progressPercent}}%;"></view>
+    </view>
+  </view>
+
+  <view class="status-card" wx:if="{{loading}}">
+    <view class="status-title">正在同步成就状态</view>
+    <view class="status-text">优先读取云端探索、地标和路线记录。</view>
+  </view>
+
+  <view class="status-card warning-card" wx:elif="{{errorText}}">
+    <view class="status-title">云端状态暂不可用</view>
+    <view class="status-text">{{errorText}}</view>
+    <button class="retry-button" bindtap="loadAchievements">重试</button>
+  </view>
+
+  <view class="category-grid">
+    <view class="category-card" wx:for="{{categoryStats}}" wx:key="key">
+      <view class="category-label">{{item.label}}</view>
+      <view class="category-value">{{item.progressText}}</view>
+    </view>
+  </view>
+
+  <view class="status-card" wx:if="{{!achievementItems.length && !loading}}">
+    <view class="status-title">暂无成就规则</view>
+    <view class="status-text">完成一次探索后再回来看看。</view>
+  </view>
+
+  <view class="achievement-list" wx:else>
+    <view class="achievement-card achievement-card-{{item.cardClass}}" wx:for="{{achievementItems}}" wx:key="id">
+      <view class="achievement-header">
+        <view>
+          <view class="achievement-name">{{item.name}}</view>
+          <view class="achievement-description">{{item.description}}</view>
+        </view>
+        <view class="achievement-badge {{item.unlocked ? 'achievement-badge-unlocked' : ''}}">
+          {{item.statusText}}
+        </view>
+      </view>
+
+      <view class="achievement-meta">
+        <text>{{item.categoryText}}</text>
+        <text>{{item.conditionText}}</text>
+      </view>
+
+      <view class="item-progress-track">
+        <view class="item-progress-fill" style="width: {{item.progressPercent}}%;"></view>
+      </view>
+      <view class="progress-text">{{item.progressText}}</view>
+    </view>
+  </view>
+</view>

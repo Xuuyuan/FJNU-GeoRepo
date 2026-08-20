@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/poi-quiz/index",
+    "pages/dashboard/index",
+    "pages/leaderboard/index",
+    "pages/history/index",
+    "pages/poi-gallery/index",
+    "pages/achievements/index",
+    "pages/session-result/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F8FAFC",
+    "navigationBarTitleText": "师大快跑",
+    "navigationBarTextStyle": "black"
+  },
+  "requiredBackgroundModes": [
+    "location"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于地图展示和持续校园探索记录"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "startLocationUpdate",
+    "startLocationUpdateBackground",
+    "onLocationChange"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,82 @@
+<view class="history-page">
+  <view class="hero-card">
+    <view class="hero-kicker" bindtap="handleDebugModeTriggerTap">Cloud Archive</view>
+    <view class="hero-title">探索历史</view>
+    <view class="hero-subtitle">查看已同步到云端的校园探索记录</view>
+  </view>
+
+  <view class="status-card" wx:if="{{loading}}">
+    <view class="status-title">正在读取云端记录</view>
+    <view class="status-text">请稍等...</view>
+  </view>
+
+  <view class="status-card warning-card" wx:elif="{{errorText}}">
+    <view class="status-title">暂时无法读取历史</view>
+    <view class="status-text">{{errorText}}</view>
+    <button class="retry-button" bindtap="loadHistory">重试</button>
+  </view>
+
+  <view class="status-card" wx:elif="{{!allSessionCount}}">
+    <view class="status-title">{{historyEmptyTitle}}</view>
+    <view class="status-text">{{historyEmptyText}}</view>
+  </view>
+
+  <view class="history-list" wx:else>
+    <view class="history-summary">
+      <text>共 {{allSessionCount}} 次探索</text>
+      <text>{{totalDistanceText}}</text>
+    </view>
+
+    <view class="history-tabs">
+      <button
+        class="history-tab {{item.active ? 'history-tab-active' : ''}}"
+        wx:for="{{historyTabs}}"
+        wx:key="key"
+        data-filter-key="{{item.key}}"
+        bindtap="handleFilterTap"
+      >
+        {{item.label}}
+      </button>
+    </view>
+
+    <view class="status-card history-empty-card" wx:if="{{!sessions.length}}">
+      <view class="status-title">{{historyEmptyTitle}}</view>
+      <view class="status-text">{{historyEmptyText}}</view>
+    </view>
+
+    <block wx:else>
+      <view class="session-card" wx:for="{{sessions}}" wx:key="id">
+        <view class="session-header">
+          <view>
+            <view class="session-title">{{item.title}}</view>
+            <view class="session-time">{{item.timeText}}</view>
+          </view>
+          <view class="session-badge">{{item.coverageText}}</view>
+        </view>
+
+        <view class="metric-row">
+          <view class="metric-item">
+            <view class="metric-label">距离</view>
+            <view class="metric-value">{{item.distanceText}}</view>
+          </view>
+          <view class="metric-item">
+            <view class="metric-label">时长</view>
+            <view class="metric-value">{{item.durationText}}</view>
+          </view>
+          <view class="metric-item">
+            <view class="metric-label">点亮</view>
+            <view class="metric-value">{{item.unlockedGridText}}</view>
+          </view>
+        </view>
+
+        <view class="session-tags" wx:if="{{item.poiText || item.routeText || item.achievementText}}">
+          <view class="session-tag" wx:if="{{item.poiText}}">{{item.poiText}}</view>
+          <view class="session-tag route-tag" wx:if="{{item.routeText}}">{{item.routeText}}</view>
+          <view class="session-tag accent-tag" wx:if="{{item.achievementText}}">{{item.achievementText}}</view>
+        </view>
+
+        <view class="session-detail">{{item.detailText}}</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,77 @@
+<view class="page">
+  <map
+    id="campusMap"
+    class="campus-map"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    min-scale="{{minScale}}"
+    max-scale="{{maxScale}}"
+    skew="{{mapSkew}}"
+    rotate="{{mapRotate}}"
+    markers="{{markers}}"
+    polygons="{{polygons}}"
+    polyline="{{polyline}}"
+    show-location="{{showNativeLocation}}"
+    enable-poi="{{baseMapPoiEnabled}}"
+    enable-building="{{baseMapBuildingEnabled}}"
+    enable-3D="{{map3dEnabled}}"
+    enable-overlooking="{{map3dEnabled}}"
+    enable-rotate="{{map3dEnabled}}"
+    bindtap="handleMapTap"
+    bindmarkertap="handleMarkerTap"
+    bindregionchange="handleRegionChange"
+  ></map>
+
+  <view class="hud top-panel">
+    <view class="gps-chip {{gpsWeak ? 'gps-chip-weak' : ''}}">
+      <view class="chip-dot"></view>
+      <text>{{gpsStatusText}}</text>
+    </view>
+    <view class="top-link-actions">
+      <view class="top-action-button history-button" bindtap="handleOpenHistory">历史</view>
+      <view class="top-action-button gallery-button" bindtap="handleOpenPoiGallery">图鉴</view>
+      <view class="top-action-button achievement-button" bindtap="handleOpenAchievements">成就</view>
+      <view class="top-action-button dashboard-button" bindtap="handleOpenDashboard">看板</view>
+      <view class="top-action-button clear-data-button" wx:if="{{debugModeEnabled}}" bindtap="handleClearAllData">清空</view>
+    </view>
+    <view class="top-action-button map-mode-button {{map3dEnabled ? 'map-mode-button-active' : ''}}" bindtap="toggleMapPerspective">
+      {{map3dEnabled ? '2D' : '3D'}}
+    </view>
+  </view>
+
+  <view
+    class="hud explore-panel-host {{panelTransitionEnabled ? 'explore-panel-host-transition' : ''}}"
+    style="bottom: {{panelHostBottomRpx}}rpx;"
+  >
+    <explore-panel
+      exploring="{{exploring}}"
+      exploreStatusText="{{exploreStatusText}}"
+      coverageRatio="{{coverageRatio}}"
+      syncStatusText="{{syncStatusText}}"
+      exploredCount="{{exploredCount}}"
+      totalGridCount="{{totalGridCount}}"
+      trackPointCount="{{trackPointCount}}"
+      visitedPoiCount="{{visitedPoiIds.length}}"
+      currentLocationText="{{currentLocationText}}"
+      lastDiscoverPoiName="{{lastDiscoverPoiName}}"
+      lastDiscoverPoiKnowledge="{{lastDiscoverPoiKnowledge}}"
+      lastAchievementName="{{lastAchievementName}}"
+      debugLatitude="{{debugLatitude}}"
+      debugLongitude="{{debugLongitude}}"
+      debugModeEnabled="{{debugModeEnabled}}"
+      locating="{{locating}}"
+      panelCollapsed="{{panelCollapsed}}"
+      bind:locate="handleLocate"
+      bind:manualsync="handleManualSync"
+      bind:cleartrack="handleClearTrack"
+      bind:dismissdiscover="handleDismissDiscoverNotice"
+      bind:dismissachievement="handleDismissAchievementNotice"
+      bind:toggleexplore="handleStartExplore"
+      bind:togglepanel="togglePanel"
+      bind:paneltouchstart="handlePanelTouchStart"
+      bind:paneltouchmove="handlePanelTouchMove"
+      bind:paneltouchend="handlePanelTouchEnd"
+    ></explore-panel>
+  </view>
+</view>

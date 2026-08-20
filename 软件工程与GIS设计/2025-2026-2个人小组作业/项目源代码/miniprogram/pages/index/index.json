@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "师大快跑",
+  "usingComponents": {
+    "explore-panel": "/components/explore-panel/index"
+  }
+}

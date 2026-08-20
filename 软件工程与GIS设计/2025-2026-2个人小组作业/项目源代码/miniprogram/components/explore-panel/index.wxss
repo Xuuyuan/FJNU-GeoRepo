@@ -1,0 +1,193 @@
+.stats-panel {
+  padding: 28rpx;
+  border-radius: 32rpx;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18rpx 48rpx rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(18rpx);
+}
+
+.stats-panel-collapsed {
+  box-shadow: 0 12rpx 32rpx rgba(15, 23, 42, 0.14);
+}
+
+.panel-handle-zone {
+  margin: -4rpx 0 12rpx;
+  padding-top: 6rpx;
+  padding-bottom: 8rpx;
+}
+
+.panel-handle {
+  width: 92rpx;
+  height: 8rpx;
+  margin: 0 auto;
+  border-radius: 999rpx;
+  background: #cbd5e1;
+}
+
+.panel-handle-text {
+  margin-top: 12rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #64748b;
+}
+
+.stats-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.stats-title {
+  font-size: 38rpx;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.stats-subtitle {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #475569;
+}
+
+.sync-text {
+  max-width: 240rpx;
+  text-align: right;
+  font-size: 22rpx;
+  line-height: 1.5;
+  color: #2563eb;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16rpx;
+  margin-top: 22rpx;
+}
+
+.metric-card {
+  padding: 18rpx 20rpx;
+  border-radius: 22rpx;
+  background: linear-gradient(180deg, #eff6ff, #f8fafc);
+}
+
+.metric-label {
+  font-size: 22rpx;
+  color: #64748b;
+}
+
+.metric-value {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.metric-highlight {
+  color: #2563eb;
+}
+
+.location-card,
+.discover-card,
+.achievement-card,
+.debug-card {
+  margin-top: 18rpx;
+  padding: 18rpx 20rpx;
+  border-radius: 22rpx;
+  background: #f8fafc;
+}
+
+.achievement-card {
+  background: #fef3c7;
+}
+
+.notice-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+}
+
+.notice-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 999rpx;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.notice-close-icon {
+  width: 22rpx;
+  height: 22rpx;
+  opacity: 0.72;
+}
+
+.location-label,
+.discover-title,
+.achievement-title,
+.debug-title {
+  font-size: 22rpx;
+  color: #64748b;
+}
+
+.location-value,
+.discover-name,
+.achievement-name {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.discover-knowledge {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.debug-text {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #475569;
+}
+
+.button-row {
+  display: flex;
+  gap: 16rpx;
+  margin-top: 22rpx;
+}
+
+.secondary-button,
+.ghost-button,
+.explore-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 88rpx;
+  line-height: 1.2;
+  border-radius: 999rpx;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.secondary-button {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.ghost-button {
+  background: #ffffff;
+  border: 2rpx solid #cbd5e1;
+  color: #334155;
+}
+
+.explore-button {
+  background: linear-gradient(135deg, #2563eb, #0f766e);
+  color: #ffffff;
+  box-shadow: 0 12rpx 28rpx rgba(37, 99, 235, 0.22);
+}

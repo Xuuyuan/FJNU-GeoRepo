@@ -1,0 +1,94 @@
+<view class="gallery-page">
+  <view class="hero-card">
+    <view class="hero-kicker" bindtap="handleDemoModeTriggerTap">Campus Album</view>
+    <view class="hero-title">{{heroTitle}}</view>
+    <view class="hero-subtitle">{{heroSubtitle}}</view>
+    <view class="progress-track">
+      <view class="progress-fill" style="width: {{heroProgressPercent}}%;"></view>
+    </view>
+  </view>
+
+  <view class="status-card" wx:if="{{loading}}">
+    <view class="status-title">正在同步图鉴状态</view>
+    <view class="status-text">优先读取云端地标、路线与探索记录。</view>
+  </view>
+
+  <view class="status-card warning-card" wx:elif="{{errorText}}">
+    <view class="status-title">云端状态暂不可用</view>
+    <view class="status-text">{{errorText}}</view>
+    <button class="retry-button" bindtap="loadGallery">重试</button>
+  </view>
+
+  <view class="album-tabs">
+    <button
+      class="album-tab {{item.active ? 'album-tab-active' : ''}}"
+      wx:for="{{albumTabs}}"
+      wx:key="key"
+      data-album-key="{{item.key}}"
+      bindtap="handleAlbumTap"
+    >
+      {{item.label}}
+    </button>
+  </view>
+
+  <block wx:if="{{activeAlbumKey === 'poi'}}">
+    <view class="filter-tabs">
+      <button
+        class="filter-tab {{item.active ? 'filter-tab-active' : ''}}"
+        wx:for="{{filterTabs}}"
+        wx:key="key"
+        data-filter-key="{{item.key}}"
+        bindtap="handleFilterTap"
+      >
+        {{item.label}}
+      </button>
+    </view>
+
+    <view class="poi-list">
+      <view class="poi-card {{item.discovered ? 'poi-card-unlocked' : ''}}" wx:for="{{poiItems}}" wx:key="id">
+        <view class="poi-icon">{{item.indexText}}</view>
+        <view class="poi-content">
+          <view class="poi-title-row">
+            <view class="poi-name">{{item.name}}</view>
+            <view class="poi-badge {{item.discovered ? 'poi-badge-unlocked' : ''}}">
+              {{item.discovered ? '已发现' : '未发现'}}
+            </view>
+          </view>
+          <view class="poi-description">{{item.description}}</view>
+          <view class="poi-knowledge" wx:if="{{item.knowledge}}">{{item.knowledge}}</view>
+          <view class="poi-quiz" wx:if="{{item.quizText}}">题目：{{item.quizText}}</view>
+          <view class="poi-location" wx:if="{{item.locationText}}">{{item.locationText}}</view>
+          <view class="poi-discovered-time" wx:if="{{item.discoveredTimeText}}">
+            发现时间：{{item.discoveredTimeText}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class="route-list" wx:else>
+    <view class="route-card route-card-{{item.cardClass}}" wx:for="{{routeItems}}" wx:key="id">
+      <view class="route-header">
+        <view class="route-icon">{{item.indexText}}</view>
+        <view class="route-title-group">
+          <view class="route-name">{{item.name}}</view>
+          <view class="route-description">{{item.description}}</view>
+        </view>
+        <view class="route-badge {{item.completed ? 'route-badge-unlocked' : ''}}">
+          {{item.statusText}}
+        </view>
+      </view>
+
+      <view class="route-poi-title">包含地标</view>
+      <view class="route-poi-text">{{item.poiText}}</view>
+
+      <view class="route-progress-row">
+        <text>{{item.gridText}}</text>
+        <text>{{item.thresholdText}}</text>
+      </view>
+      <view class="item-progress-track">
+        <view class="item-progress-fill" style="width: {{item.progressPercent}}%;"></view>
+      </view>
+    </view>
+  </view>
+</view>

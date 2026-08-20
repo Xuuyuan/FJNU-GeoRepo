@@ -1,0 +1,53 @@
+<view class="leaderboard-page">
+  <view class="hero-card">
+    <view class="hero-kicker">Campus Ranking</view>
+    <view class="hero-title">探索排行榜</view>
+    <view class="hero-subtitle">按网格、地标或成就数查看云端排名</view>
+  </view>
+
+  <view class="metric-tabs">
+    <button
+      class="metric-tab {{item.active ? 'metric-tab-active' : ''}}"
+      wx:for="{{metricTabs}}"
+      wx:key="key"
+      data-metric="{{item.key}}"
+      bindtap="handleMetricTap"
+    >
+      {{item.label}}
+    </button>
+  </view>
+
+  <view class="status-card warning-card" wx:if="{{errorText}}">
+    <view class="status-title">排行榜暂不可用</view>
+    <view class="status-text">{{errorText}}</view>
+  </view>
+
+  <view class="status-card" wx:if="{{loading}}">
+    <view class="status-title">正在读取排行榜</view>
+    <view class="status-text">从云端聚合当前可演示数据。</view>
+  </view>
+
+  <view class="my-rank-card" wx:if="{{!errorText && !loading && hasCurrentUserRank}}">
+    <view>
+      <view class="my-rank-label">我的排名</view>
+      <view class="my-rank-name">{{currentUserRow.nickName}}</view>
+    </view>
+    <view class="my-rank-value">第 {{currentUserRank}} 名 · {{currentUserRow.metricText}}</view>
+  </view>
+
+  <view class="status-card" wx:if="{{!errorText && !loading && !rows.length}}">
+    <view class="status-title">暂无排行数据</view>
+    <view class="status-text">完成探索并同步后会出现在这里。</view>
+  </view>
+
+  <view class="rank-list" wx:if="{{!errorText && !loading && rows.length}}">
+    <view class="rank-row {{item.rowClass}}" wx:for="{{rows}}" wx:key="userId">
+      <view class="rank-number">{{item.rankText}}</view>
+      <view class="rank-main">
+        <view class="rank-name">{{item.nickName}}</view>
+        <view class="rank-sub">{{item.subText}}</view>
+      </view>
+      <view class="rank-value">{{item.metricText}}</view>
+    </view>
+  </view>
+</view>

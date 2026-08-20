@@ -1,0 +1,57 @@
+<view class="dashboard-page">
+  <view class="hero-card">
+    <view class="hero-kicker">Explorer Profile</view>
+    <view class="hero-title">{{levelText}}</view>
+    <view class="score-text">{{score}} 积分</view>
+    <view class="progress-track">
+      <view class="progress-fill" style="width: {{levelProgressPercent}}%;"></view>
+    </view>
+    <view class="next-level">{{nextLevelText}}</view>
+  </view>
+
+  <view class="status-card warning-card" wx:if="{{errorText}}">
+    <view class="status-title">看板使用本地兜底</view>
+    <view class="status-text">{{errorText}}</view>
+    <button class="retry-button" bindtap="loadDashboard">重试</button>
+  </view>
+
+  <view class="stat-grid">
+    <view class="stat-card" wx:for="{{statCards}}" wx:key="key">
+      <view class="stat-label">{{item.label}}</view>
+      <view class="stat-value">{{item.value}}</view>
+    </view>
+  </view>
+
+  <view class="section-header">
+    <view>
+      <view class="section-title">探索统计</view>
+      <view class="section-subtitle">{{cloudStatText}}</view>
+    </view>
+    <button class="small-button" bindtap="handleOpenLeaderboard">排行</button>
+  </view>
+
+  <view class="status-card" wx:if="{{!leaderboardRows.length}}">
+    <view class="status-title">排行榜待生成</view>
+    <view class="status-text">{{leaderboardEmptyText}}</view>
+  </view>
+  <view class="rank-preview" wx:else>
+    <view class="rank-row" wx:for="{{leaderboardRows}}" wx:key="userId">
+      <view class="rank-number {{item.rowClass}}">{{item.rankText}}</view>
+      <view class="rank-main">
+        <view class="rank-name">{{item.nickName}}</view>
+        <view class="rank-sub">{{item.subText}}</view>
+      </view>
+      <view class="rank-value">{{item.metricText}}</view>
+    </view>
+  </view>
+
+  <view class="section-title recent-title">最近探索</view>
+  <view class="status-card" wx:if="{{!recentSessions.length}}">
+    <view class="status-text">完成并同步探索后，这里会显示最近三次记录。</view>
+  </view>
+  <view class="session-card" wx:for="{{recentSessions}}" wx:key="id">
+    <view class="session-title">{{item.title}}</view>
+    <view class="session-time">{{item.timeText}}</view>
+    <view class="session-meta">{{item.distanceText}} · {{item.durationText}} · {{item.unlockedGridText}}</view>
+  </view>
+</view>
