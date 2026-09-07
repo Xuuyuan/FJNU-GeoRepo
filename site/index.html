@@ -16,85 +16,134 @@
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="返回首页">
-        <span class="brand-mark" aria-hidden="true">G</span>
-        <span>
-          <strong>福建师范大学-地理科学专业课程资料存档</strong>
-        </span>
+        <svg
+          class="brand-mark"
+          viewBox="0 0 40 40"
+          fill="none"
+          aria-hidden="true"
+        >
+          <circle cx="20" cy="20" r="17" />
+          <ellipse cx="20" cy="20" rx="8" ry="17" />
+          <path d="M3 20h34M7 10h26M7 30h26M20 3v34" />
+        </svg>
+        <span
+          ><strong>FJNU <span class="brand-light">/</span> GeoRepo</strong
+          ><small>福建师范大学 · 地理科学课程资料库</small></span
+        >
       </a>
+      <nav aria-label="主导航">
+        <a href="#resources">探索资料</a><a href="#about">关于档案</a
+        ><a
+          href="https://github.com/Xuuyuan/FJNU-GeoRepo"
+          target="_blank"
+          rel="noreferrer"
+          >GitHub ↗</a
+        >
+      </nav>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="contour contour-one" aria-hidden="true"></div>
-        <div class="contour contour-two" aria-hidden="true"></div>
+      <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <h1>让散落的课程资料，<br /><em>重新成为一张地图。</em></h1>
+          <p class="eyebrow"><span></span> THE GEOGRAPHY FIELD NOTES</p>
+          <h1 id="hero-title">
+            以地理为坐标，<br />让知识<span class="title-accent"
+              >有迹可循。</span
+            >
+          </h1>
           <p class="hero-intro">
-            汇集往年试题、复习笔记、教学课件与课程作业。
+            从山川与河流，到城市与人群。<br />在这里，找到下一段地理探索的起点。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#resources">查找资料</a>
-            <a
-              class="button button-secondary"
-              href="https://github.com/Xuuyuan/FJNU-GeoRepo"
-              target="_blank"
-              rel="noreferrer"
+            <a class="button button-primary" href="#resources"
+              >探索课程资料 <span aria-hidden="true">↗</span></a
             >
-              前往仓库 <span aria-hidden="true">↗</span>
-            </a>
             <a
-              class="button button-secondary"
+              class="text-link"
               href="https://github.com/Xuuyuan/FJNU-GeoRepo-BookStore"
               target="_blank"
               rel="noreferrer"
+              >电子教材仓库 <span aria-hidden="true">↗</span></a
             >
-              电子教材仓库 <span aria-hidden="true">↗</span>
-            </a>
           </div>
-          <div class="course-dashboard" aria-live="polite">
-            <span>当前收录</span>
-            <strong id="course-count">—</strong>
-            <span>门课程</span>
-          </div>
-          <p class="traffic-note">
-            <span aria-hidden="true">●</span>
-            由于仓库位于 GitHub，可能需要科学上网才能正常访问
+          <p class="network-notice">
+            <strong>资料访问依赖 GitHub 网络连接</strong>
+            <span>查看与下载资料前，请确保能够正常访问 GitHub。</span>
           </p>
+          <div class="hero-meta">
+            <div class="course-dashboard">
+              <strong id="course-count">—</strong><span>门课程归档</span>
+            </div>
+            <span class="meta-divider"></span>
+            <p>往年试题 / 复习笔记<br />教学课件 / 课程作业</p>
+          </div>
         </div>
-
-        <aside class="map-card" aria-label="资料库概览">
-          <div class="map-card-top">
-            <span>26.10°N</span>
-            <span>119.30°E</span>
+        <figure
+          class="atlas"
+          aria-label="原创示意地形图，展示等高线、河流与探索路径，并非实际测绘地图"
+        >
+          <div class="atlas-top">
+            <span>FIELD ATLAS / 001</span><span>地 理 · 无 界</span>
           </div>
-          <div class="map-stage" aria-hidden="true">
-            <div class="map-orbit orbit-one"></div>
-            <div class="map-orbit orbit-two"></div>
-            <div class="map-pin"><i></i></div>
+          <img
+            src="./terrain.svg"
+            alt="绿色山地等高线环绕一条蓝色河流，红色虚线串联三个探索点"
+            width="680"
+            height="620"
+          />
+          <div class="atlas-caption">
+            <span><i></i> 每一份积累，都是新的坐标。</span
+            ><span>EXPLORE THE EARTH</span>
           </div>
-        </aside>
+        </figure>
+        <div class="hero-bottom">
+          <span>一本持续生长的地理学习档案</span
+          ><a href="#resources">向下探索 <span aria-hidden="true">↓</span></a>
+        </div>
       </section>
 
-      <section class="resource-section" id="resources" aria-labelledby="resource-title">
+      <div class="discipline-strip" aria-label="学科领域">
+        <span>自然地理 <small>PHYSICAL GEOGRAPHY</small></span
+        ><i>✳</i><span>人文地理 <small>HUMAN GEOGRAPHY</small></span
+        ><i>✳</i><span>地理信息 <small>GEOINFORMATICS</small></span
+        ><i>✳</i><span>遥感科学 <small>REMOTE SENSING</small></span>
+      </div>
+
+      <section
+        class="resource-section"
+        id="resources"
+        aria-labelledby="resource-title"
+      >
         <div class="section-heading">
           <div>
-            <h2 id="resource-title">资料库</h2>
+            <p class="eyebrow">01 / THE COLLECTION</p>
+            <h2 id="resource-title">沿着目录，<span>发现知识。</span></h2>
           </div>
-          <p>逐级打开目录，查看其中的子目录与文件。</p>
+          <p>
+            从一门课程出发，找到所需的学习资料。<br />打开目录即可浏览、查看与下载。
+          </p>
         </div>
 
         <div class="search-panel">
           <label class="search-box">
             <span aria-hidden="true">⌕</span>
             <span class="sr-only">搜索资料库</span>
-            <input id="search-input" type="search" placeholder="搜索一级目录……" autocomplete="off" />
+            <input
+              id="search-input"
+              type="search"
+              placeholder="输入课程名称，开始探索……"
+              autocomplete="off"
+            />
             <kbd>Ctrl K</kbd>
           </label>
         </div>
 
         <div class="library-toolbar">
           <div class="breadcrumb" id="breadcrumb" aria-label="当前位置"></div>
-          <p><strong id="result-count">0</strong><span id="result-unit"> 个一级目录</span></p>
+          <p>
+            <strong id="result-count">0</strong
+            ><span id="result-unit"> 个一级目录</span>
+          </p>
         </div>
 
         <div class="directory-heading" id="directory-heading" hidden>
@@ -102,9 +151,19 @@
             <span>当前目录</span>
             <h3 id="directory-title"></h3>
           </div>
-          <a id="directory-github-link" href="#" target="_blank" rel="noreferrer">在 GitHub 打开此目录 ↗</a>
+          <a
+            id="directory-github-link"
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            >在 GitHub 打开此目录 ↗</a
+          >
         </div>
-        <div class="directory-grid" id="directory-grid" aria-live="polite"></div>
+        <div
+          class="directory-grid"
+          id="directory-grid"
+          aria-live="polite"
+        ></div>
         <div class="file-list" id="file-list" aria-live="polite" hidden></div>
         <div class="empty-state" id="empty-state" hidden>
           <span aria-hidden="true">⌁</span>
@@ -115,11 +174,13 @@
 
       <section class="about-section" id="about">
         <div>
-          <h2>一份由学生共同延续的<br />地理学习档案。</h2>
+          <p class="eyebrow">02 / KEEP EXPLORING</p>
+          <h2>知识因分享，<br />走向<span>更远的地方。</span></h2>
         </div>
         <div class="about-copy">
           <p>
-            本仓库主要收录福建师范大学地理科学（类）相关课程资料，仅用于学习交流与存档。若您愿意补充资料或提出建议，可以直接在 GitHub 仓库下提交 Pull Request 或在下方发送邮件。
+            本仓库主要收录福建师范大学地理科学（类）相关课程资料，仅用于学习交流与存档。若您愿意补充资料或提出建议，可以直接在
+            GitHub 仓库下提交 Pull Request 或在下方发送邮件。
           </p>
           <div class="about-actions">
             <a
@@ -127,12 +188,17 @@
               href="https://github.com/Xuuyuan/FJNU-GeoRepo/pulls"
               target="_blank"
               rel="noreferrer"
-            >提交资料 <span aria-hidden="true">↗</span></a>
+              >提交资料 <span aria-hidden="true">↗</span></a
+            >
             <a href="mailto:xuyuan@fjnu.edu.cn">发送邮件</a>
           </div>
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <span>FJNU / GeoRepo <small>地理科学课程资料存档</small></span>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
 
     <script src="./app.js"></script>
   </body>

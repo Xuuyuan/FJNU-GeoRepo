@@ -25,7 +25,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p _site
-          cp site/index.html site/styles.css site/app.js _site/
+          cp site/index.html site/styles.css site/app.js site/terrain.svg _site/
           node site/scripts/generate-catalog.mjs _site/catalog.json
 
       - name: Configure GitHub Pages

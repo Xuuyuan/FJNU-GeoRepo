@@ -138,7 +138,7 @@ function openDirectory(path) {
 
   currentPath = path;
   searchInput.value = "";
-  searchInput.placeholder = currentPath ? "搜索当前目录……" : "搜索一级目录……";
+  searchInput.placeholder = currentPath ? "搜索当前目录……" : "输入课程名称，开始探索……";
   renderLibrary();
 }
 
